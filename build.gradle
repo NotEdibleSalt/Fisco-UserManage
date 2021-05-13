@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.4.5'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter:2.4.5'
+    implementation 'junit:junit:4.13.1'
+    implementation 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    compile ("org.yaml:snakeyaml:1.27")
+    compile ('org.fisco-bcos.java-sdk:fisco-bcos-java-sdk:2.7.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.4.5'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:2.4.5"
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
